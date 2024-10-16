@@ -94,7 +94,6 @@ Now, let's consider a single dipole in our system, and write down the partition 
 $$
     Z_1 = \sum_i {\rm e}^{- \beta E_i}= {\rm e}^{-\beta \mu B} + {\rm e}^{\beta \mu B} = 2 \cosh (\beta \mu B)
 $$
-
 This means the probability of having a dipole contribute an interaction energy of $\mp\mu B$ looks like the below graph
 ![Para_Prob](Figures/x_versus_prob.png)
 
@@ -145,40 +144,3 @@ $$
     \left( \frac{\partial \chi}{\partial T} \right)_B < 0
 $$
 We'll need this in a second.
-
-So, what does this let us accomplish? Well, let's consider the Helmholtz Free Energy again. It leads to the equiavelent Maxwell relation of
-$$
-    \left(\frac{\partial S}{\partial B}\right)_T = \left(\frac{\partial m}{\partial T}\right)_B \approx \frac{V B}{\mu_0} \left( \frac{\partial \chi}{\partial T} \right)_B
-$$
-where that last simplification comes from taking 
-$$
-\chi \approx \frac{\mu_0 M}{B}
-$$
-and replacing $M$ with $m/V$, and carrying out the derivative (that is, it only works for paramagnets).
-
-Thus, the change in heat during an isothermal change in the B field is
-$$
-    \Delta Q = T \left( \frac{\partial S}{\partial B} \right)_T \Delta B = \frac{T V B}{\mu_0} \left( \frac{\partial \chi}{\partial T} \right)_B \Delta B<0
-$$
-This means that heat is emitted from the material during this process.
-
-We can use our usual trick of dealing with differentials
-$$
-    \left(\frac{\partial T}{\partial B}\right)_S \left(\frac{\partial B}{\partial S}\right)_T \left(\frac{\partial S}{\partial T}\right)_B = -1
-$$
-to obtain an expression for change in temprature due to an adiabatic change in the B field
-$$
-    \left(\frac{\partial T}{\partial B}\right)_S = - \left(\frac{\partial S}{\partial B}\right)_T \left(\frac{\partial T}{\partial S}\right)_B.
-$$
-If we define the heat capacity at constant magnetic field to be $C_{B} = T \left(\frac{\partial S}{\partial T}\right)_B$ then we get
-$$
-    \left(\frac{\partial T}{\partial B}\right)_S = - \frac{T V B}{\mu_0 C_B} \left(\frac{\partial \chi}{\partial T}\right)_B
-$$ 
-where has to be $>0$. This means that we can cool down the paramagnet by adiabatically reducing the magnetic field on the sample. This is an incredibly useful result, as experimentally it allows for cooling of systems to millikelin (for electronic systems) and microkelvin (nuclear systems).
-
-Such a cooling proceeds in the following manner.
-
-1. A paramagnetic system is coupled to a heat bath, which is typically liquid helium at 4.2 K.
-2. Isothermal magnetisation of the sample proceeds. Since in this process $\Delta Q < 0$ for positive increases in the B field, the paramagnet transfers heat into the liquid helium heat bath.
-3. The system is decouple from the heat bath.
-4. The system is adiabatically demagntised. Since $\left(\frac{\partial T}{\partial B}\right)_S$ is positive, this means reducing the B field reduces the temperature. This leads to a significant cooling of the system.
