@@ -79,10 +79,12 @@ The problem we are faced with is that, quite often, $N$ is difficult to measure.
 $$
     S_{\rm total} = S+S_{\rm micro}
 $$
+
 where $S$ is the entropy due to the number of macrostates while $S_{\rm micro}$ is an unknown entropy contribution to the number of available microstates. This is given by
 $$
     S_{\rm micro} = <S_i> = \sum_i P_i S_i
 $$
+
 Given this, we can do the following
 $$
 \begin{align}

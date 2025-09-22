@@ -5,7 +5,7 @@
 * Heat
 * Heat Capacity
 # Introduction
-We want to study the physics of a macroscopic object which is comprised of many particles. Say, for example, that we had one mole of a substance. This would mean we have $N_{\rm A} \sim6\times10^{23}$ particles (where this is Avagardro's number) to study. Clearly this is not feasible, as to have a proper description we would need the momenta and positions for each particle.
+We want to study the physics of a macroscopic object which is comprised of many particles. Say, for example, that we had one mole of a substance. This would mean we have $N_{\rm A} \sim6\times10^{23}$ particles (where this is Avagadro's number) to study. Clearly this is not feasible, as to have a proper description we would need the momenta and positions for each particle.
 
 ---
 **Working with large numbers**
@@ -32,12 +32,11 @@ $$
     \ln n! = n\ln(n) - n.
 $$
 ---
-Instead of doing this, we are instead going to study macroscopic laws and properties which are ultimately governed by microscopic properties, but which emerge from averaging over these microscopic properties.
+Instead of doing this, we are going to study **macroscopic** laws and properties which are ultimately governed by **microscopic** properties, but which emerge from averaging over these microscopic properties.
 
-Thus, there are two approaches to studying macroscopic physics. The first is the study of classical thermodynamics (Carnot, Clausius, Kelvin, Joule). This approach requires experiments on macroscopic systems, and avoids any description of atomic physics. The laws are thus phenomenological. The second approach is that of statistical physics, which starts out from an atomic description of matter and tries to derive the laws of macroscopic bodies from these atomic properties (Maxwell, Boltzmann, Gibbs).
+Thus, there are two approaches to studying macroscopic physics. The first is the study of classical thermodynamics (Carnot, Clausius, Kelvin, Joule). This approach requires experiments on macroscopic systems, and avoids any description of atomic physics. The laws are thus phenomenological. The second approach is that of statistical physics, which starts out from an atomic description of matter and tries to derive the laws of macroscopic bodies from these atomic properties (Maxwell, Boltzmann, Gibbs). There is also the kinetic theory of gases which attempts to understand thermodynamics by considering velocity distributions of particles. We will touch on this in places, but a more rigorous treatment will come in PY3104.
 # Macroscopic quantities & the Thermodynamic limit
 So what exactly are macroscopic quantities, and how do they arise? Consider the diagram below, in which we have a gas in a sealed container and a movable piston.
-	
 ![Sealed_Cotainer](Sealed_Container.svg)
 
 When that piston at rest, the force exerted on the piston balances the pressure exerted on the piston by the gas, and are related through
@@ -52,14 +51,15 @@ This is not always the case - for very small macroscopic bodies or using very se
 
 Our goal is then to describe macroscopic systems using well defined, measurable quantities such as the mass, pressure, volume, or temperature of an object. These quantities can be split into two different categories:
 - **Extensive variables** (such as volume, total energy), which scale with the size of the system.
-- **Intensive variables** (such as temperature, pressure), which do not scale.
+- **Intensive variables** (such as temperature, pressure), which do not scale with the size of the system.
 As an example, consider a volume $V$ of a gas at temperature $T$ and pressure $P$. If you now only study one half of the container, the volume of gas you are studying has halved, but the temperature and pressure of the gas are the same.
 # The Ideal Gas
-For the ideal gas, we will follow the developments of classical thermodynamics. That is, we will rely on phenomenological laws observed in experiments, and combine them together. The three relevant observed laws are **Boyle's Law**:
+For the ideal gas, we will follow the developments of classical thermodynamics. That is, we will rely on phenomenological laws observed in experiments, and combine them together. The three relevant observed laws are 
+**Boyle's Law**:
 $$
     P \propto \frac{1}{V}.
 $$
-**Charle's Law:**
+**Charles' Law:**
 $$
     V \propto T.
 $$
@@ -86,21 +86,19 @@ $$
 	U = \frac{3}{2} N k_{\rm B} T
 $$
 # Heat
-As we begin our studies, the next concept we need to deal with is heat. So, what does it mean to say something is hot? If I'm standing beside a radiator, I can feel the heat coming from it. If I'm standing in a fridge, I can feel heat being drawn away from me. So, let's use that as our starting definition: Heat is energy in transit.
+As we begin our studies, the next concept we need to deal with is heat. So, what does it mean to say something is hot? If I'm standing beside a radiator, I can feel the heat coming from it. If I'm standing in a fridge, I can feel heat being drawn away from me. So, let's use that as our starting definition: *Heat is energy in transit.*
 
 So is there a natural direction for this flow of energy? If we put a hot object in contact with a cold object, there is a natural flow of energy from the hot object to the cold object which increases the temperature of the cold object. 
 
 There are instances when the direction can be reversed (e.g. fridges/freezers) where the hot object decreases to match the temperature of the cold object, but the key difference here is that we need to put additional energy into the system to cause this.
 
-It's also important to note the "in transit" part of the definition, but we'll return to this later on in the course. Heat is measured in joules, and the rate of heating is thus in watts (J/s).
+It's also important to note the "in transit" part of the definition, but we'll return to this later on in the course.
 # Heat Capacity
 Next, let's ask the question "how much heat needs to be supplied to an object to raise its temperature by a small amount $dT$?" The answer is
 $$
     dQ=CdT
 $$
 where $C$ is the heat capacity of an object. $C$ can come in a few flavours (see Section 2.2 of Blundell), but the most common one is the specific heat capacity, which is the heat capacity per unit mass ($c=M/C$) (given a mass $M$ of an object which has some measured heat capacity $C$).
-
-For an example, see 2.2 of Blundell & Blundell.
 
 The equation above is only somewhat useful to us. It simply asks the question "how much heat should be added to raise the temperature of a gas?". In practice there are two ways to do this:
 

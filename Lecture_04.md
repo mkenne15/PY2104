@@ -5,10 +5,23 @@
 * Reversibility.
 * Isothermal/Adiabatic Expansions.
 # The First Law of Thermodynamics
-At the end of the last lecture, we stated the first law. In mathematical form, this is:
-$$ 
-    {\rm d U} = {\rm d}Q + {\rm d}W.
+So, now we are in a position to state the first law of thermodynamics, which says:
+
+**The first law of thermodynamics**
+Energy is conserved, and heat and work are both forms of energy.
+
+This was shown experimentally by Joule, who changed the temperature of a mass of water in two ways: rotating a paddle through it, and by placing a heating element in it, and for a fixed temperature change, found that the energy from both methods was the same.
+
+Mathematically, we can right the first law as 
 $$
+    \Delta U = \Delta Q + \Delta W.
+$$
+That is, the change in internal energy of a system, $\Delta U$, is equal to the the sum of the heat supplied to the system $\Delta Q$ and the work done on the system $\Delta W$. Writing it for differential changes gives
+
+$$ 
+    {\rm d U} = {\rm d}Q +  {\rm d}W.
+$$
+
 Our first task is to see if there's an easy form for expressing how the ${\rm d}W$ term behaves. To do this, consider the below setup.
 
 ![Sealed_Container](Figures/Sealed_Container.svg)
@@ -48,13 +61,13 @@ $$
 $$
 The heat capacity at constant pressure is then
 $$
-    C_P = \left(\frac{{\rm d} Q}{{\rm d} T}\right)_P = \left(\frac{\partial U}{\partial T}\right)_V + \left[ \left(\frac{\partial U}{\partial V}\right)_T +P \right] \left( \frac{{\rm d} V}{{\rm d}T}\right)_P
+    C_P = \left(\frac{\partial Q}{\partial T}\right)_P = \left(\frac{\partial U}{\partial T}\right)_V + \left[ \left(\frac{\partial U}{\partial V}\right)_T +P \right] \left( \frac{\partial V}{\partial T}\right)_P
 $$
 A natural question to then ask is - which is larger? That is, does it require more energy to increase the temperature of a sample when performed at constant pressure, or at constant volume?
 
 The combined expression is:
 $$
-    C_P-C_V = \left[ \left(\frac{\partial U}{\partial V}\right)_T +P \right] \left( \frac{{\rm d} V}{{\rm d}T}\right)_P.
+    C_P-C_V = \left[ \left(\frac{\partial U}{\partial V}\right)_T +P \right] \left( \frac{\partial V}{\partial T}\right)_P.
 $$
 
 Finally, the ratio of these two heat capacities is called the Adiabatic Index, and is given by
@@ -64,7 +77,7 @@ $$
 This quantity is a useful quantity, so it's worth memorising its definition.
 ## The Heat Capacity of an Ideal Gas
 Given that the internal energy of an ideal gas is given by $U=\frac{3}{2} N k_{\rm B} T$, let's derive expressions for $C_P$ and $C_V$.
-First, note that the internal energy is independant of volume. As such 
+First, note that the internal energy is independent of volume. As such 
 $$
     \frac{\partial U}{\partial V}=0.
 $$
@@ -128,7 +141,7 @@ For an ideal gas, we have that ${\rm d} U = C_V {\rm d T}$, and because the proc
 $$
 \begin{align}
 C_V {\rm d T} &= -P {\rm d}V \\
-&= - \frac{Nk_{\rm B}}{V} {\rm d}V
+&= - \frac{Nk_{\rm B}T}{V} {\rm d}V
 \end{align}
 $$
 Let's work with one mole of ideal gas for the moment ($N_{\rm A} k_{\rm B}=R$). As such, we get
@@ -158,6 +171,3 @@ P^{1-\gamma} T^{\gamma} &= const\\
 P V^{\gamma} &= const
 \end{align}
 $$
-## Isotherms & Adiabats
-So now we have two scenarios for working an ideal gas. It can undergo an adiabatic process, in which case $P V^\gamma = const$, or it can undergo an isothermal expansion, in which case $PV=const$. We'll cover what these processes can be used for later, but the below can be treated as a prelude, as it plots pressure versus volume for both processes for two different initial conditions.
-![Adiabats_isotherms](Figures/Adiabats_vs_isotherms.jpg)

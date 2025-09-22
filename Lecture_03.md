@@ -54,9 +54,6 @@ $$
 $$
 to save time.
 
-### Example 1: Two state system
-Now imagine we have a very simple system that has 2 allowed energy states, one with energy 0 and one with energy $\epsilon$. What is the average energy of this system as a function of temperature?
-
 ## The partition function and Energy
 So now assume we have some system with internal energy $U$. What is the average energy of the system? To calculate this, we need to take the energy of each state and multiply it by the probability that each state will occur. This gives
 $$
@@ -84,20 +81,3 @@ As a nice example, consider warming up your hands. If you change the temperature
 In this course, we will endeavour to write exact differentials as ${\rm d} T$, and inexact differentials as đQ. However, some times latex doesn't work with this symbol, so always check one of the course books to be sure whether an equation involves an exact or an inexact differential.
 
 **Equation of state**: An equation of state links together functions of state. For example, $P V = N k_{\rm B} T$ is the equation of state of an Ideal Gas.
-## The First Law of Thermodynamics
-So, now we are in a position to state the first law of thermodynamics, which says:
-
-**The first law of thermodynamics**
-Energy is conserved, and heat and work are both forms of energy.
-
-This was shown experimentally by Joule, who changed the temperature of a mass of water in two ways: rotating a paddle through it, and by placing a heating element in it, and for a fixed temperature change, found that the energy from both methods was the same.
-
-Mathematically, we can right the first law as 
-$$
-    \Delta U = \Delta Q + \Delta W.
-$$
-That is, the change in internal energy of a system, $\Delta U$, is equal to the the sum of the heat supplied to the system $\Delta Q$ and the work done on the system $\Delta W$. Writing it for differential changes gives
-
-$$ 
-    {\rm d U} = {\rm d}Q +  {\rm d}W.
-$$

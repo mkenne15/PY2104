@@ -55,7 +55,7 @@ This means that
 $$
     {\rm d} U = T{\rm d} S - P {\rm d} V
 $$
-We have derived this assuming everything is reversible. However, all of the quantities in the previous equation are functions of state - that is, they are path independant. This means that this equation also holds for irreversible changes. This might not seem immediately obvious. As a quick check, remember that for irreversible changes we have that
+We have derived this assuming everything is reversible. However, all of the quantities in the previous equation are functions of state - that is, they are path independent. This means that this equation also holds for irreversible changes. This might not seem immediately obvious. As a quick check, remember that for irreversible changes we have that
 $$
     {\rm d} Q \leq T {\rm d} S
 $$
@@ -63,11 +63,12 @@ while
 $$
     {\rm d} W \geq - P {\rm d} V.
 $$
-So for irreversible changes, ${\rm d} Q $ decreases while ${\rm d} W $ increases, meaning ${\rm d} U$ is balanced. As such 
+So for irreversible changes, ${\rm d} Q$ decreases while ${\rm d} W$ increases, meaning ${\rm d} U$ is balanced. As such 
 $$
     {\rm d} U = T{\rm d} S - P {\rm d} V
 $$
 is true **for any process**!
+
 Now, using one of the tricks we used earlier, given that U is now only a function of S and V, we can write U as
 $$
     {\rm d} U = \left( \frac{\partial U}{\partial S}\right)_V {\rm d} S + \left( \frac{\partial U}{\partial V}\right)_S {\rm d} V
@@ -102,7 +103,7 @@ $$
     P_f &= \frac{P_i}{2}
 \end{align}
 $$
-However, calculating the entropy associated with this change is difficult. Immediately after opening the valve, the gas will expand rapidly, meaning it is not in equilibrium and will not be undergoing a reversible process. However, entropy is a function of state. This means that the difference in entropy between the gas prior to the valve opening and after opening the valve and letting the gas reach equilibrium after expanding irreversibly **is the same** as if we had reversible expanded the gas, as the change in entropy is path independent.
+However, calculating the entropy associated with this change is difficult. Immediately after opening the valve, the gas will expand rapidly, meaning it is not in equilibrium and will not be undergoing a reversible process. However, entropy is a function of state. This means that the difference in entropy between the gas prior to the valve opening and after opening the valve and letting the gas reach equilibrium after expanding irreversibly **is the same** as if we had reversibly expanded the gas, as the change in entropy is path independent.
 
 As such, we can pretend that the gas were expanded, say, isothermally, calculate the change in the entropy for this expansion, and it will be the same as for the irreversible process. this gives
 $$

@@ -14,21 +14,30 @@ T = temp[0] # Assuming an isothermal atmosphere, using T at the base.
 
 density = atmo_dat[:,9] #This is number density of N2 from the models
 alt = atmo_dat[:,5]*1000 #Data saved as km, so converting to m
+dT = -0.002*(alt[0]-alt[80])
+T_var = np.linspace(T-dT,T,80)[::-1]
 
 model = density[0]*np.exp(-m*g*alt/k_B/T)
+model2 = density[0]*np.exp(-m*g*alt[:80]/k_B/T_var)
 
 fig,ax = plt.subplots(nrows=1,ncols=2,figsize=[8,3],dpi=150)
 ax[0].plot(alt/1000,density,label='MRLMSIS Model')
 ax[0].plot(alt/1000,model,label='Isothermal Model')
+ax[0].plot(alt[:80]/1000,model2,label='Adiabatic Model')
+ax[0].set_xlim(0,50)
 ax[0].legend()
 ax[0].set_xlabel(r'Altitude (km)')
 ax[0].set_ylabel(r'N2 number density (${\rm m}^{-3}$)')
 
 ax[1].plot(alt/1000,density,label='MRLMSIS Model')
 ax[1].plot(alt/1000,model,label='Isothermal Model')
+ax[1].plot(alt[:80]/1000,model2,label='Adiabatic Model')
 ax[1].legend()
 ax[1].set_xlabel(r'Altitude (km)')
 ax[1].set_ylabel(r'N2 number density (${\rm m}^{-3}$)')
 ax[1].set_yscale("log")
+ax[1].set_xlim(0,50)
+ax[1].set_ylim(1e15,)
 plt.tight_layout()
+plt.savefig("../Figures/Model_Atmosphere.png")
 plt.show()
