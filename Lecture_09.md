@@ -1,80 +1,3 @@
-# Availability
-At the end of the last lecture, we defined a new term called the availability,
-$$
-{\rm d} A  = {\rm d} U + P_0 {\rm d}V - T_0 {\rm d}S.
-$$
-and deduced that for any process, changes in this term must be less than or equal to zero. That is,
-$$
-{\rm d} A \le 0.
-$$
-So how does that help us? Consider the following examples.
-## A process at fixed entropy and volume
-This means that ${\rm d} S=0$ and ${\rm d} V=0$. 
-Thus, we have that
-$$
-    {\rm d} A  = {\rm d} U
-$$
-and
-$$
-    {\rm d} A = {\rm d} U \leq 0.
-$$
-As such, we must minimise the internal energy $U$ to find the equilibrium state of this system.
-## Fixed entropy & pressure
-This means that ${\rm d} S=0$ and ${\rm d} P=0$. Thus, we have that
-$$
-    {\rm d} A  = {\rm d} U + P_0 {\rm d}V 
-$$
-Recalling now that the enthalpy $H = U+PV$, such that 
-$$
-    {\rm d} H = {\rm d} U + P {\rm d} V + V {\rm d} P
-$$
-which, for constant pressure, becomes
-$$
-    {\rm d} H = {\rm d} U + P {\rm d} V
-$$
-As such, the change in availability is given by 
-$$
-    {\rm d} A  = {\rm d} H \leq 0.
-$$
-As such, we must minimise the enthalpy $H$ to find the equilibrium state of this system.
-## Thermally isolated & fixed volume
-If a system is thermally isolated, then ${\rm d} U = 0$. Thus 
-$$
-    {\rm d} A  = - T_0 {\rm d} S \leq 0
-$$
-which gives 
-$$
-    {\rm d} S  \geq 0
-$$
-As such, we must maximise the entropy to the find equilibrium state of this system.
-## Fixed temperature & volume
-This means that ${\rm d} T=0$ and ${\rm d} V=0$. Thus, we have that
-$$
-    {\rm d} A  = {\rm d} U - T_0 {\rm d}S
-$$
-Recalling that the Helmholtz Free Energy is $F = U - TS$, and following the same steps as for the fixed entropy and pressure scenario, we are left with
-$$
-    {\rm d} A = {\rm d} F \leq 0.
-$$
-So we must minimise the Helmholtz Free energy to find the equilibrium state.
-## Fixed pressure and temperature
-This means that ${\rm d} T=0$ and ${\rm d} P=0$. Thus, we have that
-$$
-    {\rm d} A  = {\rm d} U + P_0 {\rm d}V - T_0 {\rm d}S \leq 0
-$$
-Recalling that the Gibbs Free Energy is $G = H - TS = U + PV - TS$, we get that
-$$
-\begin{align}
-{\rm d} G &= {\rm d}U + P_0 {\rm d}V + V{\rm d}P_0 - T_0{\rm d}S - S{\rm d}T_0\\
-&= {\rm d}U + P_0 {\rm d}V - T_0{\rm d}S
-\end{align}
-$$
-for constant $T_0$ and $P_0$. We then get
-$$
-    {\rm d} A = {\rm d} G \leq 0
-$$
-So we must minimise the Gibbs Free energy to find the equilibrium state.
-So now we can see where these thermodynamic potentials come in use. Let's consider an example next.
 # Maxwell's Relations
 Next, we're going to use our new thermodynamic potentials to arrive at some very useful relations.
 First, we need to do a bit of setup. For a general function of two variables which has an exact differential, $f(x,y)$, we have that
@@ -136,11 +59,15 @@ So why do we care about these? Well, Maxwell's relations allow us to relate quan
 ## Revisiting Heat Capacity (again)
 Ok let's use one of the tricks from the last lecture to derive some more helpful quantities. First, let's start with the fundamental thermodynamic relation, which we can write as :
 $$
+     {\rm d} S = \frac{1}{T} {\rm d} U+\frac{P}{T}{\rm d} V
+$$
+We would like to have the entropy as a function of just temperature and volume,$S=S(T,V)$ such that
+$$
+    {\rm d}S = \left(\frac{\partial S}{\partial T} \right)_V {\rm d}T + \left(\frac{\partial S}{\partial V} \right)_T {\rm d}V
+$$
+We combining these we get
+$$
      {\rm d} S = \frac{1}{T} \left(\frac{\partial U}{\partial T}\right)_V {\rm d} T + \frac{1}{T}\left[ P + \left(\frac{\partial U}{\partial V}\right)_T \right] {\rm d} V
-$$
-If we then write $S=S(T,V)$ we get 
-$$
-    {\rm d}S = \left(\frac{\partial S}{\partial T} \right)_V {\rm d}T + \left(\frac{\partial S}{\partial V} \right)_T {\rm d}S
 $$
 Which immediately gives
 $$

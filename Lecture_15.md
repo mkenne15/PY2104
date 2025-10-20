@@ -45,7 +45,7 @@ which, if we then let $u=v / \left(\frac{2 k_{\rm B} T}{m}\right)^{1/2}$, become
 $$
     P(u)du = \frac{4}{\sqrt{\pi}} u^2 \exp (-u^2) du = F_1(u) du
 $$
-This equation describes a Maxwell velocity distribution, and is plotted below.
+This equation describes a Maxwell speed distribution, and is plotted below.
 ![Max_Boltzmann](Figures/Maxwell_Distribution.png)
 First, the maximum of the distribution occurs at
 
@@ -80,3 +80,5 @@ $$
     \langle E \rangle= \frac{1}{2} m \langle v^2 \rangle= \frac{3}{2} k_{\rm B} T
 $$
 in agreement with our previous result for the an ideal gas (if we multiple this by N particles).
+
+The distribution we have derived above is the speed distribution - the velocity distribution is subtlety different in its derivation, but I recommend looking it up to become familiar with it.

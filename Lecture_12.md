@@ -109,6 +109,7 @@ The internal energy of the system is given by
 $$
    U = -\frac{{\rm d} \ln Z}{{\rm d} \beta}= -N \mu B \tanh\left(\mu \beta B\right)
 $$
+
 The Helmholtz function is then given by
 $$
     F = -k_{\rm B} T \ln (Z_N) = -N k_{\rm B} T \ln [2 \cosh (\beta \mu B)]

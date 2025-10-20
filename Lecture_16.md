@@ -51,13 +51,15 @@ $$
     C_{\rm V} &= 3 N \left( - \frac{(\hbar \omega_{\rm E})^2 {\rm e}^{\beta \hbar \omega_{\rm E}}} {({\rm e}^{\beta \hbar \omega_{\rm E}}-1)^2} \right) \left( \frac{-1}{k_{\rm B}T^2} \right).\\
 \end{align}
 $$
+
 If we now define the Einstein Temperature,$\Theta_{\rm E} = \frac{\hbar \omega_{\rm E}}{k_{\rm B}}$ and $x=\frac{\Theta_{\rm E}}{T}$, then this simplifies to
 $$
     C_{\rm V} = 3 N k_{\rm B} \frac{ x^2 {\rm e}^{x}} {({\rm e}^{x}-1)^2}
 $$
+
 So now the question we have to ask is: does this expression for the heat capacity both satisfy the Dulong-Petit law (that is, at high temperatures, $C_{\rm V} = 3R$, and also the Third law (that is, at low temperatures, it should go to 0).
 
-- In the high temperature limit, when $T\gg \Theta_{\rm E}$, then $x \ll 1$. If we Taylor expand $e^x$ around $x=0$, then $e^x=1+x+...$ and thus $C_{\rm V}= 3 N k_{\rm B} = 3 R$ for 1 mole, as required
+- In the high temperature limit, when $T\gg \Theta_{\rm E}$, then $x \ll 1$. If we Taylor expand $e^x$ around $x=0$, then $e^x=1+x+...$ and thus $C_{\rm V}= 3 N k_{\rm B} = 3 R$ for 1 mole, as required.
 - In the low temperature limit, when $T\ll \Theta_{\rm E}$, then $x \gg 1$. In this limit, $\frac{e^{x}}{(e^{x}-1)^2} \to \frac{e^{x}}{e^{2x}}=e^{-x}$. Thus, $C_{\rm V} = 3 N k_{\rm B} \left(\frac{\Theta_{\rm E}}{T}\right)^2 \exp{-\frac{\Theta_{\rm E}}{T}}$. As $T \to 0$, the exponential function goes to 0 faster than the other term grows, thus the heat capacity goes to 0 as required by the third law!
 
 So how else is this picture useful? Let's take diamond as an example, which is the material Einstein studied in order to test this theory. By measuring the heat capacity of diamond at various temperatures, Einstein found that the Einstein temperature should be $\Theta_{\rm E} = 1325$ K. (Shown below, and data taken from Einstein's paper: https://einsteinpapers.press.princeton.edu/vol2-trans/228)
@@ -71,10 +73,13 @@ Fortunately, we have already developed part of the framework we need for this ta
 $$
     \int g(\omega) {\rm d} \omega = 3N
 $$
+
 Debye used the following knowledge to determine an appropriate distribution of frequencies - we know that vibrational waves will travel through the solid with a speed equal to the speed of sound of the solid. That is
+
 $$
     \omega = v_{s}q
 $$
+
 where q is the wave vector of the lattice vibrations. The density of these vibrations is given as
 $$
     g(q) {\rm d} q = \frac{4\pi q^2 {\rm d} q}{(2\pi/L)^3} \times 3

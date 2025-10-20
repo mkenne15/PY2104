@@ -17,7 +17,7 @@ If we integrate this function, we end up with an undefined constant
 $$
     S(T) = S(T_0) + \int _{T_0} ^T \frac{C_P}{T} {\rm d} T
 $$
-In the test on Friday, we saw that measuring changes of S is possible, but figuring out an absolute measurement of entropy is not easy. This is what the third law of thermodynamics addresses.
+We've seen that measuring changes of S is possible, but figuring out an absolute measurement of entropy is not easy. This is what the third law of thermodynamics addresses.
 
 # The Third Law of Thermodynamics
 There are two ways of arriving at a definition of the third law: statistically and experimentally. Let's start with the statistical definition.
@@ -26,7 +26,7 @@ Consider a system which has distinct energy levels. If we enumerate over the ene
 $$
     E_1<E_2<E_3<...<E_r<...
 $$
-such that the degeneracy of level $E_r$ is $G(E_r)$. The probability of the system being in a state with energy $E_r$ is thus
+such that the degeneracy of level $E_r$ is $g(E_r)$. The probability of the system being in a state with energy $E_r$ is thus
 $$
     P(E_r) = \frac{1}{Z} g(E_r) {\rm e}^{-\beta E_r}
 $$
@@ -95,3 +95,9 @@ $$
 which also means that $\beta_P \to 0$. This means that thermal expansion stops.
 
 With that, our discussion of the laws of classical thermodynamics comes to a close. Next, we're going to discuss statistical mechanics, and start looking at how we apply both classical and statistical thermodynamics to particular problems.
+
+## Unattainability of absolute zero
+Another consequence is that no system can be cooled to absolute 0 K. To see this, consider two different tracks through the $S-T$ plane, where each track represents a different parameter (like pressure or volume). If there existed a track where the entropy did not go to 0 at 0 K, then you could imagine cooling a system by first reducing the systems entropy isothermally (to get you to the lower track), then cooling the system isentropically (bringing you back to the upper track) and you could do this repeatedly until the system was below 0 K.
+
+![Third_Law](Figures/ThirdLaw.jpg)
+However, if instead all processes lead to an entropy of 0 at a temperature of 0 K, then such a combination of isentropic and isothermal processes will only ever let you approach a temperature of 0 K, it will never actually get you there.

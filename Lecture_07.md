@@ -40,6 +40,9 @@ $$
 \Delta S = k_{\rm B} \ln 2^N = N k_{\rm B} \ln 2
 $$
 This treatment also tells us something important about distinguishablility. In the above, we have assumed that after mixing, we are still able to tell which of the 2 gases a given particle belongs to. But consider redoing this entire experiment, but where the gas on both sides of the chamber is the same gas. After opening the valve we should expect there to be no change in entropy - thus, entropy only changes if the gases are distinguishable!
+
+![[Pasted image 20250922085014.png]]
+
 ## Combining Entropy & Probability
 Consider again $S=k_{\rm B} \ln \Omega$. How does the entropy account for microstates? Let's do an example to check.
 

@@ -75,9 +75,12 @@ Now, let's say we have a wave vector of magnitude $k=|{\bf k}|$. The number of a
 $$
     \frac{1}{8} 4\pi k^2 {\rm d} k
 $$
-![DoS](Figures/Density_of_States.svg)
 
-As such, the number of allowed states with a wave vector whose magnitude lies between $k$ and $k+{\rm d} k$ is given by $g(k){\rm d}k$ where $g(k)$ is the density of states. This number of states is given by
+![DoS|300](Figures/Density_of_States.svg)
+
+As such, the number of allowed states with a wave vector whose magnitude lies between $k$ and $k+{\rm d} k$ is given by $g(k){\rm d}k$ where $g(k)$ is the density of states. An example of this is given below in 2-D (assuming a $k_z=\pi/L$).
+![DoS|450](Figures/k_space_2D.png)
+This number of states is given by
 $$
     g(k){\rm d}k = \frac{{\rm volume\;in\;k-space\;of\;one\;octant\;of\;the\;spherical\;shell}}{{\rm volume\;in\;k-space\;occupied\;per\;allowed\;state}}
 $$

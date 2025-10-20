@@ -1,4 +1,4 @@
-## Thermodynamic Potentials
+# Thermodynamic Potentials
 Up until this point, we have been working a lot with the internal energy if a system, $U$, which is a function of state.
 
 In principle, we can combine $U$ with any other functions of state ($P$, $V$, $S$, $T$) to create new functions of state. This are called **thermodynamic potentials**. Many of these combinations are not particularly useful, but there are 3 that are, and in this next section, we are going to look at these 3.
@@ -32,12 +32,13 @@ $$
 \Delta U = \int_{T_1}^{T_2} C_{\rm V}\:{\rm d} T
 $$
 What we want to do now is determine similar useful expressions, but for processes that are not isochoric.
-
 ## Enthalpy
 Imagine we are studying a small thermodynamic system inside a large room. Keeping track of the total internal energy of the system as it does work (or has work done on it) can be a bit of a pain. Instead, we can always add the work that is needed to make space for the system. This gives us enthalpy:
 $$
     H = U+PV.
 $$
+To understand what this potential represents, I will rely on Daniel Schroeder's analogy. Consider making a rabbit of volume $V$ appear in a room. Not only must the internal energy of the rabbit $U$ be provided, but but also additional energy is required to move the atmosphere which is occupying the space that you want the rabbit to exist in out of the way. This energy is equal to the work done $PV$. So the enthalpy represents the total energy required to bring something into existence (or, alternatively, represents the total energy you could extract if you made something completely dissappear, including the work done by the atmosphere as it moves back in to replace the rabbit that has vanished).
+
 Thus, an infinitesimal change in $H$ is given by
 $$
 \begin{align}
@@ -67,6 +68,7 @@ The above potentials are both functions of entropy, $S$, which can difficult to 
 $$
     F = U - TS.
 $$
+Again, think about our rabbit. In this case, we can realise that the environment that we are making the rabbit appear in is able to provide some of the internal energy the rabbit gets via heat transfer. Hence, $F$ represents all of the work that is required to bring the rabbit into the room, minus the energy we get for free from the environment.
 This gives
 $$
 \begin{align}
@@ -91,7 +93,9 @@ Let
 $$
     G = H - TS
 $$
-This gives
+This is now represents a combination of the above ideas. As we create the rabbit in the room, the total energy that must be supplied is the enthalpy - but the total energy we'll have to provide is this minus whatever energy we get for free via heat transfer from the environment.
+
+In differential form this gives
 $$
 \begin{align}
     {\rm d} G &= T {\rm d} S + V {\rm d} P - T {\rm d} S - S {\rm d} T\\
@@ -104,40 +108,45 @@ $$
    S = -\left(\frac{\partial G}{\partial T}\right)_P ; V = \left(\frac{\partial G}{\partial P}\right)_T
 $$
 ## Availability
-So what use are these new thermodynamic potentials? As a starting point, consider the setup below where we have a system inside some surroundings. The system will be allowed to exchange heat and to do work on the surroundings.
+So what use are these new thermodynamic potentials? For isolated systems, the entropy tends to increase, as we've seen previously. But often our systems are not isolated, but are embedded inside some surroundings - so let's look at this. The system will be allowed to exchange heat and to do work on the surroundings.
 
 ![Entropy_of_mixing](Figures/Surroundings.svg)
 
-So what happens when energy ${\rm d} U$ and volume ${\rm d} V$ are transferred from the surroundings to the system? First, the internal energy of the surroundings will change according to the 1st law by
+We're going to assume that the surrondings act like a reservoir, and that the temperature of the and volume of surroundings stays constant. The change in entropy of the Universe due to some change in our system and surroundings are
 $$
-    {\rm d} U_0 = - {\rm d} U = T_0 {\rm d} S_0 - P_0 (- {\rm d} V)
+{\rm d}S_{\rm Total}={\rm d}S+{\rm d}S_{\rm 0}
 $$
-The $-$ in ${\rm d} U$ and in ${\rm d} V$ are because these quantites are being transferred **to** the system, and as such are negative for the surroundings. Rearranging we have
+where the subscript 0 refers to our surroundings.
+
+We can write the F.T.E. as
 $$
-    {\rm d} S_0 = - \left(\frac{{\rm d} U + P_0  {\rm d} V}{T_0}\right)
+{\rm d}S = \frac{1}{T}{\rm d}U+\frac{P}{T}{\rm d}V
 $$
-If the entropy of the system changes by ${\rm d} S$ during this process, then the total change in entropy is
+meaning the entropy change of the surroundings for fixed temperature and volume is
 $$
-    {\rm d} S_{\rm Total} = {\rm d} S_0 + {\rm d} S.
-$$
-The second law tells us that ${\rm d} S_{\rm Total} \geq 0$. Combining this with the above equation then gives
-$$
-    T_0 {\rm d} S_{\rm Total} = -({\rm d} U + P_0 {\rm d} V - T_0 {\rm d} S) \geq 0
+{\rm d}S_0 = \frac{1}{T_0}{\rm d}U_0
 $$
 giving
 $$
-    {\rm d} U + P_0 {\rm d} V - T_0 {\rm d} S \leq 0.
+{\rm d}S_{\rm Total} = {\rm d}S+ \frac{1}{T_0}{\rm d}U_0
 $$
-We will now define a new variable called **availability** and let it be
+Since the temperature of the system is at the same temperature as our surroundings ($T_0=T$), and through conservation of energy we require ${\rm d}U=-{\rm d}U_0$, we get
 $$
-    A  = U + P_0 V - T_0 S
+{\rm d}S_{\rm Total} = {\rm d}S-\frac{1}{T}{\rm d}U
 $$
-such that (given that $P_0$ and $T_0$ are constants)
+or, alternatively,
 $$
-    {\rm d} A  = {\rm d} U + P_0 {\rm d}V - T_0 {\rm d}S.
+{\rm d}S_{\rm Total} = -\frac{1}{T}({\rm d}U-T{\rm d}S)=-\frac{1}{T}{\rm d F}
 $$
-This means that
+So, given that the total entropy must be increasing (The second law tells us that ${\rm d} S_{\rm Total} \geq 0$), this final line tells us that  the Helmholtz Free Energy of the system must be decreasing (${\rm d} F \leq 0$) 
+
+We could also consider a process during which the volume of the system can change, but the pressure of the system stays the same as that as the reservoir. In this case, we'd get 
+
 $$
-    {\rm d} A \leq 0
+{\rm d}S_{\rm Total} = {\rm d}S-\frac{1}{T}{\rm d}U-\frac{P}{T}{\rm d}V
 $$
-What does this actually mean? It tells us that any changes in a system as it settles down to equilibrium will decrease $A$. When at equilibrium, $A$ remains constant. As such, in order to figure out what the equilibrium conditions for a system are, all we have to do is minimise $A$. However, the type of equilibrium we are trying to achieve will affect how $A$ is minimised. What exactly does this mean? We'll cover that in our next lecture.
+assuming that $T_0=T$, ${\rm d}U=-{\rm d}U_0$, and ${\rm d}V=-{\rm d}V_0$. Tidying this up gives
+$$
+{\rm d}S_{\rm Total} =-\frac{1}{T}{\rm d G}
+$$
+So, given that the total entropy must be increasing (The second law tells us that ), this final line tells us that  the Gibbs Energy of the system must be decreasing (${\rm d} G \leq 0$) .

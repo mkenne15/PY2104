@@ -116,6 +116,7 @@ where we've used the result for an infinite geometric progression of
 $$
     a\sum_{n=0}^{\infty} r^n = \frac{a}{1-r}
 $$
+
 where $a$ is a constant to simplify the expression.
 
 ## 2. Deriving useful quantities from the partition function
